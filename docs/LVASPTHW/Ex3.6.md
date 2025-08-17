@@ -30,7 +30,7 @@ k-point     ik :   kx ky kz   weight = w
 
 band     ib # energy  E # occ.  occ_value
 
-ion      s     py    pz    px    dxy   dyz   dz2   dxz   x2-y2   tot
+ion      s     py    pz    px    dxy   dyz   dz2   dxz   dx2-y2   tot
    1     ...   ...   ...   ...   ...   ...   ...   ...    ...    ...
    2     ...   ...   ...   ...   ...   ...   ...   ...    ...    ...
    ...
@@ -51,12 +51,14 @@ tot     ...   ...   ...   ...   ...   ...   ...   ...    ...    ...
   比如分析能带带性质（s、p、d 轨道成分），或对吸附态进行轨道贡献分解。
 
 - **结合 PyProcar 可视化**  
-  
+
   [PyProcar ](https://romerogroup.github.io/pyprocar5.6.6/#) 是一个 Python 工具，用于从 PROCAR 文件提取信息并绘图，支持能带可视化、DOS 投影等功能。
-  
+
 - **结合cgrad可视化**
 
-  [ CGRAD](https://ionizing.github.io/rsgrad/)  也是一个强大的后处理工具，可以通过读取PROCAR做类似PyProcar 的事情。
+  [ RSGRAD](https://ionizing.github.io/rsgrad/)  也是一个强大的后处理工具，可以通过读取PROCAR做类似PyProcar 的事情。
+
+- VASPKit 等软件也有相关的功能，自己可以尝试去摸索。
 
 
 
@@ -67,5 +69,5 @@ tot     ...   ...   ...   ...   ...   ...   ...   ...    ...    ...
 | 控制参数 | LORBIT 决定投影方式；RWIGS 仅对 LORBIT < 10 有效 |
 | 文件结构 | 每个 k 点、能带、离子均有对应投影值 |
 | 投影意义 | 仅包含 RWIGS 球体内的成分，真实物理解释需结合态密度 DOS |
-| 应用场景 | 胖带图、轨道成分、可视化工具（如 PyProcar, cgrad等） |
+| 应用场景 | 胖带图、轨道成分、可视化工具（如 PyProcar, rsgrad,  vaspkit等） |
 
