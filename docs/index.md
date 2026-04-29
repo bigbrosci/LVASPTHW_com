@@ -2,7 +2,7 @@
 
 Learn VASP: The Hard Way 第三版更新进度：
 
-2025_09_23: 第11章更新了一些内容。 
+2026_04_15: Add the download link for the 2nd version。 
 
 1） 如果你对某一个内容感兴趣，可以联系大师兄添加到书中。微信： BigBroSci
 2） 如果你对某一个计算很熟悉，可以联系大师兄把你的经验写进书中。微信：BigBroSci
@@ -26,3 +26,6 @@ Password: bigbrosci
 
 (4) 严重警告：
 任何人发广告前都要咨询群主，获得允许后方可。
+
+(5) 旧版本下载: [第二版](./Downloads/Second_edition.pdf) 
+
