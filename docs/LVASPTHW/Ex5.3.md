@@ -2,6 +2,66 @@
 
 本节主要记录 p4vasp 的更新历史。
 
+## 2026-11-24 更新内容：
+
+1） Surface 来源下拉框改成一排三个按钮（Metal preset、Use bulk result、Open POSCAR/CIF），当前来源高亮。
+
+2） 修复 Use bulk result 后晶格参数仍显示旧预设值的问题，改显示导入 Bulk 的实际 name/a/c。
+
+3） 打包了新的 Windows 便携版（2026-11-24，源 42b9802a），含 Surface 来源按钮和 Bulk 晶格显示修复。
+
+## 2026-11-23 更新内容：
+
+1） DOS 轨道选择改多选组合（d 与分量互斥，分量可多选），Export scripts 同时生成 .py/.sh，新增无界面 DOS 分析命令。
+
+2） Surface 保存时自动生成 rebuild_surface.py/.sh 重建脚本。
+
+3） 移除 Surface 初始说明；d-band filling 单位统一标 a.u.；DOS 结果数值固定三位小数。
+
+4） DOS 分析扩展到 s/p/d/f 全壳层，三排轨道按钮，按钮改名 Analyze DOS。
+
+5） Windows 科学 worker 加入 pymatgen。
+
+6） 打包了新的 Windows 便携版（2026-11-23，源 5ca60f29），含 Surface 重建、s/p/d/f 分析和无界面重放。
+
+## 2026-11-22 更新内容：
+
+1） Models 新增 ASE Surface 表面建模首版（fcc/bcc/hcp 模板、晶面指数、层数、真空、底部固定，存 POSCAR + surface.json）。
+
+2） Slab 新增 Center/Bottom 摆放按钮（居中或底部留 0.1 Å）。
+
+3） 个人元素资料改存 ~/.p4vasp/resources/（periodic.json、incar.json），git 更新不丢改动。
+
+4） 新增可选 pymatgen 安装入口（install/install-pymatgen.sh，独立 .venv-pymatgen）。
+
+5） ASE/RDKit/pymatgen 统一进 .venv-science 科学环境。
+
+6） DOS 新增 pymatgen 分析（元素/原子、d 轨道、自旋、E−EF 窗口，输出 center/width/filling/Hilbert 上沿/D_d(EF)，可导 CSV），左右分栏默认显示。
+
+7） 修复最大化/切换选项后 DOS 重绘不同步；Hilbert 输入支持舍入网格插值。
+
+8） 分析摘要精简（标题带 pymatgen 版本），Cancel 改成 Export Python script，可导出独立重跑脚本。
+
+9） 删除费米能级处 d-DOS（D_d(EF)）结果项，只留四项。
+
+10） 能量范围改单行显示，自旋选择改 Both/Up/Down 三按钮。
+
+## 2026-11-21 更新内容：
+
+1） Control/Show 实时绘制细节降到约 70%（原生分段 32 改 22），交互更流畅，导出画质不变。
+
+2） OUTCAR-* 文件名支持补齐（OUTCAR-freq、OUTCAR-frequency 及混合大小写走频率读取）。
+
+3） 打包了新的 Windows 便携版（2026-11-21，源 f5de130e）。
+
+## 2026-11-17 更新内容：
+
+1） 振动预览鼠标导航对齐 Show（中键平移、右键缩放、Ctrl 左键旋转，播放/切换模式保留相机）。
+
+2） 氢原子显示球半径放大 1.5 倍（只作用于 H）。
+
+3） OUTCAR_freq 等频率文件名现在能直接打开（OUTCAR_* 不区分大小写走频率读取）。
+
 ## 2026-11-14 更新内容：
 
 1） 做了 Python2 旧代码和依赖全盘审计（只出文档不删代码），新增依赖清单和版本快照工具。
